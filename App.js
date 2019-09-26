@@ -1,114 +1,114 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+import React from "react";
+import { Text, View, ScrollView } from "react-native";
+import { createAppContainer, SafeAreaView } from "react-navigation";
+import { createDrawerNavigator, DrawerActions } from "react-navigation-drawer";
+import { Appbar, Drawer, FAB, Portal, Provider, Button } from "react-native-paper";
 
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+class AddItem extends React.Component {
+  state = {
+    open: false,
+  };
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+  render() {
+    return (
+      <Provider>
+         <Portal>
+           <FAB.Group
+             style={{
+              position: 'absolute',
+              left: 0,
+              bottom: 0,
+             }}
+             open={this.state.open}
+             icon={this.state.open ? 'close' : 'add'}
+             actions={[
+               { icon: 'add', label: 'Income', onPress: () => console.log('Pressed add') },
+               { icon: 'minus', label: 'Income', onPress: () => console.log('Pressed add') },
+             ]}
+             onStateChange={({ open }) => this.setState({ open })}
+             onPress={() => {
+               if (this.state.open) {
+                 // do something if the speed dial is open
+               }
+             }}
+           />
+          </Portal>
+       </Provider>
+    );
+  }
+}
 
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
+class First extends React.Component {
+  render() {
+    return (
+      <View style={{flex: 1}}>
+        <View>
+          <Appbar.Header>
+            <Appbar.Action
+              icon="menu"
+              onPress={() =>
+                this.props.navigation.dispatch(DrawerActions.toggleDrawer())
+              }
+            />
+            <Appbar.Content title="First Page" />
+          </Appbar.Header>
+        </View>
+        <ScrollView>
+          <Text>First Page</Text>
         </ScrollView>
-      </SafeAreaView>
-    </>
-  );
-};
+        <AddItem />
+      </View>
+    );
+  }
+}
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
+class Second extends React.Component {
+  render() {
+    return (
+      <View>
+        <Appbar.Header>
+          <Appbar.Action
+            icon="menu"
+            onPress={() =>
+              this.props.navigation.dispatch(DrawerActions.toggleDrawer())
+            }
+          />
+          <Appbar.Content title="Second Page" />
+        </Appbar.Header>
+        <Text>Second Page</Text>
+      </View>
+    );
+  }
+}
 
-export default App;
+const Menu = createDrawerNavigator(
+  {
+    First: { screen: First },
+    Second: { screen: Second }
+  },
+  {
+    contentComponent: props => (
+      <ScrollView>
+        <SafeAreaView forceInset={{ top: "always", horizontal: "never" }}>
+          <Drawer.Item
+            label="First Page"
+            active="true"
+            onPress={() => props.navigation.navigate("First")}
+          />
+          <Drawer.Item
+            label="Second Page"
+            onPress={() => props.navigation.navigate("Second")}
+          />
+        </SafeAreaView>
+      </ScrollView>
+    )
+  }
+);
+
+const AppNav = createAppContainer(Menu);
+
+export default class App extends React.Component {
+  render() {
+    return <AppNav />;
+  }
+}

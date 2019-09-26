@@ -34,6 +34,10 @@ target 'catadana' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Setup `react-navigation` and `react-native-vector-icons`
   target 'catadanaTests' do
     inherit! :search_paths
     # Pods for testing

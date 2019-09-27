@@ -1,12 +1,37 @@
 # Catadana
 
-Catadana, an abbreviation of Catat Dana. TODO
+Catadana, an abbreviation of Catat Dana. An applications that help you to track the money management and solve financial issues.
 
-The application itself was made using [React Native](https://facebook.github.io/react-native/)
+The application itself was made using [React Native](https://facebook.github.io/react-native/). The development currently only focussed on **Android** platform.
 
-TODO
+--
 
-## TODO
+## Prerequisites
+
+- Android SDK
+- npm
+- Node.js
+- React Native
+
+## Dependencies
+
+- https://github.com/oblador/react-native-vector-icons
+- https://reactnativepaper.com
+- https://reactnavigation.org
+
+## Getting Started to the Project
+
+Clone this repository
+
+To run the application
+
+```
+react-native run-android
+```
+
+## Maintaineers
+
+- [Andra Antariksa](https://gitlab.com/andraantariksa)
 
 ## LISENCE
 

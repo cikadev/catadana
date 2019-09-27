@@ -3,6 +3,7 @@ import { Text, View, ScrollView } from "react-native";
 import { createAppContainer, SafeAreaView } from "react-navigation";
 import { createDrawerNavigator, DrawerActions } from "react-navigation-drawer";
 import { Appbar, Drawer, FAB, Portal, Provider, Button } from "react-native-paper";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 class AddItem extends React.Component {
   state = {
@@ -19,11 +20,11 @@ class AddItem extends React.Component {
               left: 0,
               bottom: 0,
              }}
-             open={this.state.open}
-             icon={this.state.open ? 'close' : 'add'}
+             open= {this.state.open}
+             icon={ this.state.open ? 'close' : 'add' }
              actions={[
                { icon: 'add', label: 'Income', onPress: () => console.log('Pressed add') },
-               { icon: 'minus', label: 'Income', onPress: () => console.log('Pressed add') },
+               { icon: (props) => <Icon name="minus" {...props} />, label: 'Outcome', onPress: () => console.log('Pressed add') },
              ]}
              onStateChange={({ open }) => this.setState({ open })}
              onPress={() => {

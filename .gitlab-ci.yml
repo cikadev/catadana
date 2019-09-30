@@ -1,4 +1,4 @@
-// https://hub.docker.com/r/reactnativecommunity/react-native-android/
+# https://hub.docker.com/r/reactnativecommunity/react-native-android/
 image: reactnativecommunity/react-native-android
 
 before-scripts:

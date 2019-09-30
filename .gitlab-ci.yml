@@ -2,6 +2,7 @@
 image: reactnativecommunity/react-native-android
 
 before_script:
+  - npm install
   - npm install -g envinfo && envinfo
 
 stages:
@@ -16,7 +17,6 @@ test:
 build:android:
   stage: build
   script:
-    - npm install
     - cd android && chmod +x gradlew
     - ./gradlew assembleRelease
   artifacts:

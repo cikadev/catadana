@@ -10,45 +10,25 @@
     "lint": "eslint ."
   },
   "dependencies": {
-<<<<<<< HEAD
-    "react": "16.9.0",
-    "react-native": "0.61.1",
-    "react-native-gesture-handler": "^1.4.1",
-    "react-native-paper": "^2.16.0",
-    "react-native-reanimated": "^1.2.0",
-    "react-native-screens": "^2.0.0-alpha.3",
-    "react-native-vector-icons": "^6.6.0",
-    "react-navigation": "^4.0.10",
-    "react-navigation-drawer": "^2.2.2"
-=======
     "native-base": "^2.13.8",
     "react": "16.9.0",
     "react-native": "0.61.1",
     "react-native-vector-icons": "^6.6.0"
->>>>>>> Restarting the project and alter the UI using NativeBase
   },
   "devDependencies": {
     "@babel/core": "7.6.2",
     "@babel/runtime": "7.6.2",
     "@react-native-community/eslint-config": "0.0.3",
     "babel-jest": "24.9.0",
-<<<<<<< HEAD
-    "eslint": "6.4.0",
-=======
     "eslint": "6.5.0",
->>>>>>> Restarting the project and alter the UI using NativeBase
     "jest": "24.9.0",
     "metro-react-native-babel-preset": "0.51.1",
     "react-test-renderer": "16.9.0"
   },
   "jest": {
-<<<<<<< HEAD
-    "preset": "react-native"
-=======
     "preset": "react-native",
     "transformIgnorePatterns": [
       "node_modules/(?!react-native|expo|react-navigation|native-base-shoutem-theme|@shoutem/theme|@shoutem/animation|@shoutem/ui|tcomb-form-native)"
     ]
->>>>>>> Restarting the project and alter the UI using NativeBase
   }
 }

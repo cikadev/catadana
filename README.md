@@ -16,11 +16,7 @@ The application itself was made using [React Native](https://facebook.github.io/
 ## Dependencies
 
 - https://github.com/oblador/react-native-vector-icons
-<<<<<<< HEAD
-- https://reactnativepaper.com
-=======
 - http://nativebase.io
->>>>>>> Restarting the project and alter the UI using NativeBase
 - https://reactnavigation.org
 
 ## Getting Started to the Project

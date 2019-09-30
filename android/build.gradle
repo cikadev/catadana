@@ -6,10 +6,6 @@ buildscript {
         minSdkVersion = 16
         compileSdkVersion = 28
         targetSdkVersion = 28
-<<<<<<< HEAD
-        supportLibVersion = "27.0.0"
-=======
->>>>>>> Restarting the project and alter the UI using NativeBase
     }
     repositories {
         google()

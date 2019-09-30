@@ -199,12 +199,9 @@ task copyDownloadableDepsToLibs(type: Copy) {
 }
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
-<<<<<<< HEAD
 
 project.ext.vectoricons = [
     iconFontNames: [ 'MaterialIcons.ttf' , 'MaterialCommunityIcons.ttf' ]
 ]
 
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
-=======
->>>>>>> Restarting the project and alter the UI using NativeBase

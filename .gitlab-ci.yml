@@ -1,20 +1,20 @@
 # https://hub.docker.com/r/reactnativecommunity/react-native-android/
 image: reactnativecommunity/react-native-android
 
-before-scripts:
+before_script:
   - npm install -g envinfo && envinfo
 
 stages:
   - test
-  - build-android
+  - build
 
 test:
   stage: test
   script:
     - npm test
 
-build-android:
-  stage: build-android
+build:android:
+  stage: build
   script:
     - npm install
     - cd android && chmod +x gradlew

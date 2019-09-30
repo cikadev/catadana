@@ -2,12 +2,15 @@ package com.catadana;
 
 import com.facebook.react.ReactActivity;
 
+<<<<<<< HEAD
 import com.facebook.react.ReactActivityDelegate;
 
 // React Navigation
 import com.facebook.react.ReactRootView;
 import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
 
+=======
+>>>>>>> Restarting the project and alter the UI using NativeBase
 public class MainActivity extends ReactActivity {
 
   /**
@@ -18,6 +21,7 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "catadana";
   }
+<<<<<<< HEAD
 
   // React Navigation
   @Override
@@ -29,4 +33,6 @@ public class MainActivity extends ReactActivity {
       }
     };
   }
+=======
+>>>>>>> Restarting the project and alter the UI using NativeBase
 }

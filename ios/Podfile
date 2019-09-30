@@ -35,9 +35,12 @@ target 'catadana' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> Setup `react-navigation` and `react-native-vector-icons`
+=======
+>>>>>>> Restarting the project and alter the UI using NativeBase
   target 'catadanaTests' do
     inherit! :search_paths
     # Pods for testing

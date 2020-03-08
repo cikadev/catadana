@@ -18,6 +18,7 @@ The application itself was made using [React Native](https://facebook.github.io/
 - https://github.com/oblador/react-native-vector-icons
 - http://nativebase.io
 - https://reactnavigation.org
+- https://github.com/indiespirit/react-native-chart-kit
 
 ## Getting Started to the Project
 
@@ -26,7 +27,7 @@ Clone this repository
 To run the application
 
 ```
-react-native run-android
+npx react-native run-android
 ```
 
 ## Maintaineers
@@ -35,4 +36,4 @@ react-native run-android
 
 ## LISENCE
 
-[Mozilla Public License 2.0](LICENSE.txt)
+Licensed under [Mozilla Public License 2.0](LICENSE)
